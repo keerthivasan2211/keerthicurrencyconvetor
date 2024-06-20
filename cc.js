@@ -26,7 +26,7 @@ btn.addEventListener('click',()=>
 
     if(curr1===curr2)
         {
-            alert("no")
+            alert("CHOOSE DIFFERENT COUNTRIES")
         }
         else{
             convert(curr1,curr2,inputval)
@@ -39,7 +39,7 @@ function convert(curr1,curr2,inputval)
 fetch(`https://${host}/latest?amount=${inputval}&from=${curr1}&to=${curr2}`)
   .then(resp => resp.json())
   .then((data) => {
- 
+    
     document.querySelector('.rightn').value=Object.values(data.rates)
   });
 }
